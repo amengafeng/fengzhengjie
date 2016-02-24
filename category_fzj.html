@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+	<meta charset="gb2312">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="renderer" content="webkit"><!-- 360浏览器 -->
+	<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+	<meta name="keywords" content="{$SEO['keyword']}">
+	<meta name="description" content="{$SEO['description']}">
+	<link href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+	<link href="{APP_PATH}phpcms/templates/default/content/fengzhengjie/style.css" rel="stylesheet">
+	<script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+	<!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+	<!-- <div class="banner">
+		<div class="banner-swf">
+			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="1000" height="450">
+              <param name="movie" value="images/banner.swf">
+              <param name="quality" value="high">
+              <param name="wmode" value="transparent">
+              <embed src="images/banner.swf" width="1000" height="450" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" wmode="transparent">
+            </object>
+		</div>
+		<div class="hidden">
+			<h1>第12届世界风筝锦标赛暨第33届潍坊国际风筝会(西南赛区)选拨赛</h1>
+			<h3>美国美国、德国、印度、韩国、瑞典、新加坡、意大利等近20个国家及国内多支风筝队伍将云集万山</h3>
+			<h3>时间：2016年3月26日</h3>
+			<h3>地点：万山谢桥新区欢乐世界演艺中心</h3>
+			<h4>主办：国际风筝联合会\贵州省体育局\潍坊市人民政府\铜仁市人民政府</h4>
+            <h4>承办：中共铜仁市万山区委\铜仁市万山区人民政府\铜仁市文体广播电视新闻出版局</h4>
+		</div>
+	</div>
+
+	<div class="box">
+		<div class="title">
+			<h2><a class="pull-left" href=""></a><a class="pull-right" href=""></a></h2>
+		</div>
+			<div class="hd">
+				<script type="text/javascript" src="http://img.tongren.gov.cn/templates/tongren/zakiou_index/js/myfocus-2.0.4.min.js"></script>
+				<div id="myFocus" style="width: 445px;height: 258px;">
+					<div class="loading"></div>
+					<div class="pic">
+						<ul>
+							{pc:content action="lists" catid="614" order="listorder DESC" thumb="1" moreinfo=""  num="5" }
+							{loop $data $r}
+							<li><a href="{$r[url]}" target="_blank"><img src="{thumb($r['thumb'],560,320)}" width="560" height="320" thumb="" alt="{str_cut($r['title'],50,'')}" text="{str_cut($r['title'],50,'')}" /></a></li>
+							{/loop}
+							{/pc}
+						</ul>
+					</div>
+				</div>
+				<script type="text/javascript">
+				
+				myFocus.set({
+				id:'myFocus',
+				pattern:'mF_pithy_tb'
+				});
+				</script>
+			</div>
+			<div class="xw">
+				{pc:content action="lists" catid="254" num="3" order="id desc"}
+				    {loop $data $r}
+			    	<h3><a href="{$r[url]}" target="_blank">{$r[title]}</a></h3>
+			    	<p>{str_cut($r['description'],350)}[<a href="{$r[url]}" target="_blank">详情</a>]</p>
+				    {/loop}
+				{/pc}
+				<h4 class="pull-right"><a href="{$CATEGORYS[254][url]}" target="_blank">更多>></a></h4>
+			</div>
+	</div>
+	
+	<div class="box">
+		<div class="title">
+			<h2><a class="pull-left" href="{$CATEGORYS[255][url]}" target="_blank">图说盛会</a><a class="pull-right" href="{$CATEGORYS[255][url]}" target="_blank">更多>></a></h2>
+		</div>
+		<div class="box-con">
+			{pc:content action="lists" catid="255" order="id desc"  thumb="1" num="5"}
+				{loop $data $r}
+				<a class="ts-img" href="{$r[url]}" target="_blank"><img src="{thumb($r['thumb'],180,145)}" alt="{str_cut($r['title'],324)}" width="180" height="145">{$r['title']}</a>
+				{/loop}
+			{/pc}			
+		</div>
+	</div>
+	
+	<div class="box">
+		<div class="title">
+			<h2><a class="pull-left" href="{$CATEGORYS[256][url]}" target="_blank">朱砂古镇 · 仁义万山 </a></h2>
+		</div>
+		<div class="box-con">
+			<div class="wsgk">
+				<div class="wsgk-top">
+
+					{pc:content action="lists" catid="255" order="id desc"  thumb="1" num="1"}
+						{loop $data $r}
+
+						<a href="{$r[url]}" target="_blank"><img src="{thumb($r['thumb'],275,150)}" alt="{str_cut($r['title'],324)}" width="275" height="150" class="pull-left"></a>
+						<h4><a href="{$r[url]}" target="_blank">{$r['title']}</a></h4>
+						<p class="pull-right">{str_cut($r['description'],350)}[<a href="{$r[url]}" target="_blank">详情</a>]</p>
+						{/loop}
+					{/pc}
+
+				</div>
+				<div class="wsgk-bottom">
+					{pc:content action="lists" catid="255" order="id desc"  thumb="1" num="2"}
+					{loop $data $r}
+						{if $n==2}
+						<img src="{thumb($r['thumb'],145,100)}" alt="" width="145" height="100" class="pull-left">{/if}
+					{/loop}{/pc}
+					<ul class="pull-right">
+					{pc:content action="lists" catid="255" order="id desc"  thumb="1" num="10"}
+					{loop $data $r}
+						{if $n>=2}
+						<li><a href="{$r[url]}" target="_blank">{$r['title']}</a></li>
+					{/loop}{/pc}
+					</ul>
+					
+				</div>
+			</div>
+			<div class="zdxm">
+				<div class="title-min">
+					<h4><a href="{$CATEGORYS[257][url]}" target="_blank" class="pull-left">重大项目介绍</a><a class="pull-right" href="{$CATEGORYS[257][url]}" target="_blank">更多+</a></h4>
+				</div>
+				<div class="box-min">	
+					{pc:content action="lists" catid="257" num="2" order="id desc"}
+				    {loop $data $r}
+				    	<p>{str_cut($r['description'],350)}[<a href="{$r[url]}" target="_blank">详情</a>]</p>
+				    {/loop}
+					{/pc}
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="box">
+		<div class="title">
+			<h2><a class="pull-left" href="{$CATEGORYS[258][url]}" target="_blank">魅力 · 万山</a></h2>
+		</div>
+		<div class="box-con">
+			{pc:content action="lists" catid="258" order="id desc"  thumb="1" num="10"}
+				{loop $data $r}
+				<a class="ts-img" {if $n==5}class="ts-img-r"{/if} href="{$r[url]}" target="_blank"><img src="{thumb($r['thumb'],180,145)}" alt="{str_cut($r['title'],324)}" width="180" height="145">{$r['title']}</a>
+				{/loop}
+			{/pc}			
+		</div>
+	</div>
+	
+	<div class="box">
+		<div class="title">
+			<h2><a class="pull-left" href="javascript:;">人文 · 万山</a></h2>
+		</div>
+		<div class="box-con">
+			<div class="rw">
+				<div class="rw-box mr">
+					<h5><a href="{$CATEGORYS[259][url]}" target="_blank">万山名人</a></h5>
+					
+					{pc:content action="lists" catid="259" order="id desc" num="10"}
+					{loop $data $r}
+					<img src="{thumb($r['thumb'],140,80)}" alt="" width="140" height="85">
+					{/loop}{/pc}
+					<ul>
+						{pc:content action="lists" catid="259" order="id desc" num="10"}
+						{loop $data $r}
+						<li><a href="{$r[url]}" target="_blank">>{$r['title']}</a></li>
+						{/loop}{/pc}
+					</ul>
+				</div>
+				<div class="rw-box ms">
+					<h5><a href="{$CATEGORYS[260][url]}" target="_blank">万山名俗</a></h5>
+					{pc:content action="lists" catid="260" order="id desc" num="10"}
+					{loop $data $r}
+					<img src="{thumb($r['thumb'],140,80)}" alt="" width="140" height="85">
+					{/loop}{/pc}
+					<ul>
+						{pc:content action="lists" catid="260" order="id desc" num="10"}
+						{loop $data $r}
+						<li><a href="{$r[url]}" target="_blank">>{$r['title']}</a></li>
+						{/loop}{/pc}
+					</ul>
+				</div>
+				<div class="rw-box zz">
+					<h5><a href="{$CATEGORYS[261][url]}" target="_blank">万山之最</a></h5>
+					{pc:content action="lists" catid="261" order="id desc" num="10"}
+					{loop $data $r}
+					<img src="{thumb($r['thumb'],140,80)}" alt="" width="140" height="85">
+					{/loop}{/pc}
+					<ul>
+						{pc:content action="lists" catid="261" order="id desc" num="10"}
+						{loop $data $r}
+						<li><a href="{$r[url]}" target="_blank">>{$r['title']}</a></li>
+						{/loop}{/pc}
+					</ul>
+				</div>
+				<div class="rw-box tc">
+					<h5><a href="{$CATEGORYS[262][url]}" target="_blank">万山特产</a></h5>
+					{pc:content action="lists" catid="262" order="id desc" num="10"}
+					{loop $data $r}
+					<img src="{thumb($r['thumb'],140,80)}" alt="" width="140" height="85">
+					{/loop}{/pc}
+					<ul>
+						{pc:content action="lists" catid="262" order="id desc" num="10"}
+						{loop $data $r}
+						<li><a href="{$r[url]}" target="_blank">>{$r['title']}</a></li>
+						{/loop}{/pc}
+					</ul>
+				</div>
+			</div>
+			<div class="jy zdxm">
+				<div class="title-min">
+					<h4><a href="{$CATEGORYS[263][url]}" target="_blank" class="pull-left">汞都记忆</a><a class="pull-right" href="{$CATEGORYS[262][url]}" target="_blank">更多+</a></h4>
+				</div>
+				<div class="box-min">
+					{pc:content action="lists" catid="263" order="id desc"  thumb="1" num="4"}
+					{loop $data $r}
+					<a class="box-min-img" href="{$r[url]}" target="_blank"><img src="{thumb($r['thumb'],160,80)}" alt="{str_cut($r['title'],324)}" width="160" height="80"><br>{$r['title']}</a>
+					{/loop}
+					{/pc}
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer clearfix">
+		<p class="text-center">为了达到最佳浏览效果，建议使用1024及以上分辨率、IE6及以上浏览器浏览</p>
+		<p class="text-center">版权所有 &copy;铜仁网</p>
+	</div> -->
+</body>
+</html>
