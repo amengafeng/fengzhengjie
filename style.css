@@ -2,7 +2,7 @@
 * @Author: ameng
 * @Date:   2016-02-23 09:54:06
 * @Last Modified by:   ameng
-* @Last Modified time: 2016-02-26 10:45:12
+* @Last Modified time: 2016-02-26 15:13:40
 */
 ul,li{margin:0;padding:0;}
 a{
@@ -160,7 +160,7 @@ a:hover{
 }
 
 .rw{
-	width:643px;
+	width:998px;
 	height:268px;
 	float:left;
 	margin-top: 15px;
@@ -168,7 +168,7 @@ a:hover{
 	border:1px solid #eeeeee;
 }
 .rw-box{
-	width:310px;
+	width:325px;
 	height:120px;
 	float:left;
 }

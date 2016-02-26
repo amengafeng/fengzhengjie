@@ -73,13 +73,13 @@
 			</div>
 	</div>
 	
-	<div class="box">
+	<!-- <div class="box">
 		<div class="title">
 			<h2><a class="pull-left" href="{$CATEGORYS[255][url]}" target="_blank">图说盛会</a><a class="pull-right" href="{$CATEGORYS[255][url]}" target="_blank">更多>></a></h2>
 		</div>
 		<div class="box-con">
 			
-			<!-- 图片滚动 S -->
+			图片滚动 S
 			<script type="text/javascript" src="http://img.tongren.gov.cn/templates/tongren/zakiou_index/ts.js"></script>
 			<div class="picScroll">
 				<ul>
@@ -88,16 +88,16 @@
 						<li><a href="{$r[url]}" target="_blank"><img src="{thumb($r['thumb'],180,145)}" alt="{str_cut($r['title'],324)}" width="180" height="145"><p>{$r['title']}</p></a></li>
 						{/loop}
 					{/pc}
-
+	
 				</ul>
 				<a class="prev"></a>
 				<a class="next"></a>
 			</div>
 			<script type="text/javascript">jQuery(".picScroll").slide({ mainCell:"ul",autoPlay:true,effect:"left", vis:5, scroll:1, autoPage:true,delayTime:1000, pnLoop:false });</script>
-			<!-- 图片滚动 E -->
-
+			图片滚动 E
+	
 		</div>
-	</div>
+	</div> -->
 	
 	<div class="box">
 		<div class="title">
@@ -199,6 +199,19 @@
 						{/loop}{/pc}
 					</ul>
 				</div>
+				<div class="rw-box ms">
+					<h5 style="height: 14px;"><a href="{$CATEGORYS[260][url]}" target="_blank"> </a></h5>
+					{pc:content action="lists" catid="260" order="id desc" num="1" start="9"}
+					{loop $data $r}
+					<img src="{thumb($r['thumb'],140,80)}" alt="" width="140" height="85">
+					{/loop}{/pc}
+					<ul>
+						{pc:content action="lists" catid="260" order="id desc" num="4" start="9"}
+						{loop $data $r}
+						<li><a href="{$r[url]}" target="_blank">>{$r['title']}</a></li>
+						{/loop}{/pc}
+					</ul>
+				</div>
 				<div class="rw-box zz">
 					<h5><a href="{$CATEGORYS[262][url]}" target="_blank">万山特产</a></h5>
 					{pc:content action="lists" catid="262" order="id desc" num="1"}
@@ -225,17 +238,18 @@
 						{/loop}{/pc}
 					</ul>
 				</div>
-			</div>
-			<div class="jy zdxm">
-				<div class="title-min">
-					<h4><a href="{$CATEGORYS[263][url]}" target="_blank" class="pull-left">汞都记忆</a><a class="pull-right" href="{$CATEGORYS[263][url]}" target="_blank">更多+</a></h4>
-				</div>
-				<div class="box-min">
-					{pc:content action="lists" catid="263" order="id desc"  thumb="1" num="4"}
+				<div class="rw-box tc">
+					<h5 style="height: 14px;"><a href="{$CATEGORYS[262][url]}" target="_blank"> </a></h5>
+					{pc:content action="lists" catid="262" order="id desc" num="1" start="9}
 					{loop $data $r}
-					<a class="box-min-img" href="{$r[url]}" target="_blank"><img src="{thumb($r['thumb'],160,80)}" alt="{str_cut($r['title'],324)}" width="160" height="80"><br>{$r['title']}</a>
-					{/loop}
-					{/pc}
+					<img src="{thumb($r['thumb'],140,80)}" alt="" width="140" height="85">
+					{/loop}{/pc}
+					<ul>
+						{pc:content action="lists" catid="262" order="id desc" num="4" start="9"}
+						{loop $data $r}
+						<li><a href="{$r[url]}" target="_blank">>{$r['title']}</a></li>
+						{/loop}{/pc}
+					</ul>
 				</div>
 			</div>
 		</div>
