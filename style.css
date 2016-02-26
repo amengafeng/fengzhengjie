@@ -2,7 +2,7 @@
 * @Author: ameng
 * @Date:   2016-02-23 09:54:06
 * @Last Modified by:   ameng
-* @Last Modified time: 2016-02-24 12:45:58
+* @Last Modified time: 2016-02-26 10:45:12
 */
 ul,li{margin:0;padding:0;}
 a{
@@ -22,6 +22,7 @@ a:hover{
 	height:450px;
 }
 .box{
+	clear:both;
 	margin-top:10px;
 	width: 1000px;
 	margin:0 auto;
@@ -38,12 +39,13 @@ a:hover{
 	height:288px;
 	margin-top:10px;
 }
-.box h3,.box h4{
+.xw h3,.xw h4{
 	font-size:16px;
 	color:#1d70b7;
 	text-align: center;
+	margin:0;
 }
-.box h3 a,.box h4 a{
+.xw h3 a,.xw h4 a{
 	color:#1d70b7;
 }
 .title{
@@ -73,9 +75,6 @@ a:hover{
 	text-align: center;
 	margin-top:10px;
 	margin-right:12px;
-}
-.ts-img-r{
-	margin-right:0;
 }
 .wsgk{
 	float:left;
@@ -140,9 +139,15 @@ a:hover{
 	border:1px solid #eeeeee;
 	border-top:none;
 }
+.box-min ul{
+	margin: 10px 0 10px 30px;
+}
+.box-min ul li{
+	padding-bottom: 3px;
+}
 .box-min p{
 	text-indent: 2em;
-	padding:15px 10px 10px 10px;
+	padding:15px 10px 0px 10px;
 }
 .box-min .box-min-img{
 	width:160px;
@@ -174,15 +179,17 @@ a:hover{
 	float:left;
 }
 .rw-box ul{
-	float:left;
-	margin-left: 10px;
+	width: 140px;
+    height: 82px;
+    float: left;
+    margin-left: 10px;
+    overflow: hidden;
 }
 .rw-box li{
 	list-style: none;
 }
 
 .ms,.tc{
-	border-left:1px solid #aaaaaa;
 	padding-left: 10px;
 }
 .mr,.ms{
@@ -191,6 +198,18 @@ a:hover{
 .mr,.ms{
 	height:128px;
 }
+
+/* 图片滚动 */
+.picScroll{ position:relative;  height:185px; padding: 15px 0 0 18px;  background:#fff; margin-bottom:0; overflow:hidden; }
+.picScroll ul{ overflow:hidden; zoom:1; }
+.picScroll ul li{ float:left; margin: 0 6px;  width:180px; overflow:hidden; display:inline; }
+.picScroll ul li img{ width:180px; height:145px; }
+.picScroll ul li p{ width:180px; text-align:center; }
+.picScroll .prev,
+.picScroll .next{ position:absolute;  left:0px; top: 80px; display:block; width:18px; height:28px; overflow:hidden; background:url("http://img.tongren.gov.cn/templates/tongren/zakiou_index/icons.png") -40px 0 no-repeat; cursor:pointer;  }
+.picScroll .next{ left:auto; right:0px; background-position:-120px 0; }
+.picScroll .prevStop{ background-position:0 0; }
+.picScroll .nextStop{ background-position:-80px 0; }
 .footer{
 	clear: both;
 	margin-top:20px;
