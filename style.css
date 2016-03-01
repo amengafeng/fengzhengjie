@@ -2,7 +2,7 @@
 * @Author: ameng
 * @Date:   2016-02-23 09:54:06
 * @Last Modified by:   ameng
-* @Last Modified time: 2016-02-26 15:20:18
+* @Last Modified time: 2016-03-01 09:22:54
 */
 ul,li{margin:0;padding:0;}
 a{
@@ -13,13 +13,13 @@ a:hover{
 	color:red;
 }
 .banner{
-	height:450px;
-	background: url("images/banner.jpg") no-repeat center 0;
+	height:395px;
+	background: url("images/banner_1.jpg") no-repeat center 0;
 }
 .banner-swf{
 	margin:0 auto;
 	width:1000px;
-	height:450px;
+	height:395px;
 }
 .box{
 	clear:both;
